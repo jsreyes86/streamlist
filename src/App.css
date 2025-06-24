@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.streamlist-container {
+  padding-left: 40px;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.movie-form {
+  margin-top: 10px;
+}
+
+.movie-form input {
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.movie-form button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
