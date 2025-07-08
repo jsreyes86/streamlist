@@ -7,15 +7,17 @@ function StreamList() {
     const [editIndex, setEditIndex] = useState(null);
     const [editMovie, setEditMovie] = useState('');
 
-    useEffect(() => {
-        const storedMovies = JSON.parse(localStorage.getItem('movieList'));
-        if (storedMovies) {
-            setMovieList(storedMovies);
-        }
-    }, []);
+useEffect(() => {
+    const storedMovies = localStorage.getItem('movieList');
+    if (storedMovies !== null) {
+        setMovieList(JSON.parse(storedMovies));
+    }
+}, []);
 
     useEffect(() => {
-        localStorage.setItem('movieList', JSON.stringify(movieList));
+        if (movieList.length > 0) {
+            localStorage.setItem('movieList', JSON.stringify(movieList));
+        }
     }, [movieList]);
     
 

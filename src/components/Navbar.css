@@ -38,3 +38,18 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+.cart-count {
+  font-weight: bold;
+  margin-left: 4px;
+  color: #ff5722;
+}
+.brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand:visited {
+  color: inherit;
+  text-decoration: none;
+}
