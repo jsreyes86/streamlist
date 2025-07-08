@@ -20,12 +20,28 @@ function Navbar() {
                 </div>
 
                 {showMenu && (
-                    <ul className="nav-links">
-                        <li><span className="material-icons">home</span><Link to="/">Home</Link></li>
-                        <li><span className="material-icons">movie</span><Link to="/movies">Movies</Link></li>
-                        <li><span className="material-icons">shopping_cart</span><Link to="/cart">Cart</Link></li>
-                        <li><span className="material-icons">info</span><Link to="/about">About</Link></li>
-                    </ul>
+<ul className="nav-links">
+  <li>
+    <span className="material-icons">home</span>
+    <Link to="/" onClick={() => setShowMenu(false)}>Home</Link>
+  </li>
+  <li>
+    <span className="material-icons">movie</span>
+    <Link to="/movies" onClick={() => setShowMenu(false)}>Movies</Link>
+  </li>
+  <li>
+    <span className="material-icons">shopping_cart</span>
+    <Link to="/cart" onClick={() => setShowMenu(false)}>Cart</Link>
+  </li>
+  <li>
+    <span className="material-icons">info</span>
+    <Link to="/about" onClick={() => setShowMenu(false)}>About</Link>
+  </li>
+  <li>
+    <span className="material-icons">search</span>
+    <Link to="/search" onClick={() => setShowMenu(false)}>Search</Link>
+  </li>
+</ul>
                 )}
             </nav>
         </>
