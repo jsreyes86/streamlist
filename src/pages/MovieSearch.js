@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import './MovieSearch.css'; // Assuming you'll create/rename this CSS
+import './MovieSearch.css';
 
 const API_KEY = '2f4d991344389ce657f213375206da71';
 
-function Movies() {
+function MovieSearch() {
     const [query, setQuery] = useState('');
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState('');
@@ -26,7 +26,7 @@ function Movies() {
 
     return (
         <div className="movie-search-container">
-            <h1>Movies</h1>
+            <h1>Movie</h1>
             <form onSubmit={handleSearch}>
                 <input
                     type="text"
@@ -58,4 +58,5 @@ function Movies() {
         </div>
     );
 }
-export default Movies;
+
+export default MovieSearch;

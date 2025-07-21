@@ -1,0 +1,79 @@
+/* Styles for movie search container */
+.movie-search-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-search-container h1 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.movie-search-container form {
+    margin-bottom: 30px;
+}
+
+.movie-search-container input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.movie-search-container button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.movie-search-container button:hover {
+    background-color: #ff0a16;
+}
+
+.movie-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 200px;
+    text-align: left;
+    color: #fff;
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #040404;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+
+.error {
+    color: #e50914;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
