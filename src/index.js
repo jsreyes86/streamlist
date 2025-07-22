@@ -5,18 +5,20 @@ import App from './App';
 import { CartProvider } from './context/CartContext';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 serviceWorkerRegistration.register();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <GoogleOAuthProvider clientId='838667728704-r8j8thushl0behsnu2097256vpqev09o.apps.googleusercontent.com'>
     <CartProvider>
       <App />
     </CartProvider>
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to lAog results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ 
 reportWebVitals();

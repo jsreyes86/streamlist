@@ -1,6 +1,7 @@
 import React, { useContext} from "react";
 import { CartContext } from "../context/CartContext";
 import "../pages/Cart.css";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
     const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
@@ -17,7 +18,12 @@ if (isNaN(quantity) || quantity < 1) {
     const totalPrice = cart.reduce((total, item) => {
         return total + item.price * (item.quantity || 1);
     }, 0);
-   
+   const navigate = useNavigate();
+
+   const handleCheckout = () => {
+    navigate("/checkout");
+};
+
     return (
         <div className="cart-container">
             <h1>Your Cart</h1>
@@ -54,6 +60,9 @@ if (isNaN(quantity) || quantity < 1) {
                                     <h2 className="total-price">
                                         Total Price: ${totalPrice.toFixed(2)}
                                     </h2>
+                                    <button className="checkout-button" onClick={handleCheckout}>
+    Proceed to Checkout
+</button>
                                 </>
                             )}
                         </div>
